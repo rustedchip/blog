@@ -25,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        $categories = App\Category::all();
+        $authors = App\User::all();
+        
+        View::share('categories', $categories);
+        View::share('authors', $authors);
     }
 }
