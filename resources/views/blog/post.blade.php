@@ -1,5 +1,10 @@
 @extends('blog.layout')
 
+@section('head-tags') 
+
+<title>{{ $post->title }} &nbsp;&#124;&nbsp rustedchip &nbsp;&#124;&nbsp blog</title>
+
+@endsection
 
 @section('content')
 

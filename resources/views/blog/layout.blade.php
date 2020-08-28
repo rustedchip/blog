@@ -5,31 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    @yield('head-tags')
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="{{asset('vendor/fontawesome/css/all.css')}}" rel="stylesheet">
-    <title></title>
+
   </head>
   <body>
+        <div class="bg-dark">
+          <div class="row align-items-center m-0 p-0">
+            <div class="col-md-6 text-left m-0 p-0"><a class="text-light h3 p-2" href="{{route('home')}}">rustedchip</a></div>
+            <div class="col-md-6 text-right  m-0 p-0">
+              <form class="m-0 p-0 d-inline" method="POST" action="{{route('search')}}">
+                @csrf
+                  <div class="input-group p-2">
+                      <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fas fa-search"></i></div>
+                      </div>
+                      <input type="text" name="search" class="form-control" >
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
 
-
-        <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="{{route('home')}}">rustedchip</a>
-            <form class="m-0 p-0" method="POST" action="{{route('search')}}">
-              @csrf
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-search"></i></div>
-                    </div>
-                    <input type="text" name="search" class="form-control" >
-                </div>
-            </form>
-        </nav>
-
-
-    
- 
-  <button class="btn btn-secondary d-sm-block d-md-none btn-block rounded-0" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <button class="btn btn-secondary d-sm-block d-md-none btn-block rounded-0 p-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   Categories & Authors
   </button>
 

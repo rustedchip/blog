@@ -1,5 +1,10 @@
 @extends('blog.layout')
 
+@section('head-tags') 
+
+<title>@if(isset($home)) {{$home}} @endif &nbsp;&#124;&nbsp; rustedchip &nbsp;&#124;&nbsp; blog </title>
+
+@endsection
 @section('content')
 
   <div class="col-md-9 p-3 border-left border-right">

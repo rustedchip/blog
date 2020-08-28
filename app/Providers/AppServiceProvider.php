@@ -25,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        /* Comment or Remove on Deploy */
+        
         $categories = App\Category::all();
         $authors = App\User::all();
         
