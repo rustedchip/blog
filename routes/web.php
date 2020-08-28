@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'BlogController@home')->name('home');
+Route::get('post/{slug}', 'BlogController@post')->name('post');
+Route::get('posts/by-category/{id}', 'BlogController@category')->name('category');
+Route::get('posts/by-author/{id}', 'BlogController@author')->name('author');
+Route::post('posts/search', 'BlogController@search')->name('search');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
