@@ -20,9 +20,10 @@
 ### Intallation
 
 * Clone Project
-* Create your .env and add Database Credentials
+* Create your .env and add Database Credentials first to prevent errors during Voyager Install
 * Install & Update Composer
-* Install Voyager with Dummy Information for Testing **php artisan voyager:install --with-dummy**
+* Install Voyager with Dummy Information **php artisan voyager:install --with-dummy** to run migrations and create the basic menus to add blogs and categories
+* Run migragtions if is necessary 
 
 ### Blog Config
 * Blog name can be changed on Voyager Site Settings
