@@ -49,7 +49,7 @@
               <p class="d-inline p-2 m-2 small"><a class="text-light" href="{{route('category',$category->id)}}"><i class="fas fa-layer-group"></i>  {{ $category->name }}</a></p>
             @endforeach
           </div>
-          <hr>
+          <hr class="border-secondary">
           <div class="mt-3 mb-3">
             @foreach($authors as $author)
               <p class="d-inline p-2 m-2 small"><a class="text-light" href="{{route('author',$author->id)}}"><i class="fas fa-user"></i>  {{ $author->name }}</a></p>
