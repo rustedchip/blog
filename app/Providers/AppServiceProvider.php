@@ -30,8 +30,10 @@ class AppServiceProvider extends ServiceProvider
         
         $categories = App\Category::all();
         $authors = App\User::all();
-        
-        View::share('categories', $categories);
-        View::share('authors', $authors);
+
+        if($categories && $authors){
+            View::share('categories', $categories);
+            View::share('authors', $authors);
+        }
     }
 }
