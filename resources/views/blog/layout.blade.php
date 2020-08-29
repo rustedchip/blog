@@ -19,13 +19,12 @@
             <div class="col-md-6  m-0 p-0">
               <div class="row align-items-center m-0 p-0">
                 <div class="col text-left m-0 p-0">
-                <a class="text-light h3 p-2" href="{{route('home')}}">rustedchip</a>
+                <a class="text-light h3 p-2" href="{{route('home')}}">{{Voyager::setting('site.title', 'blog')}}</a>
                 </div>
                 <div class="col text-right m-0 p-0 d-sm-block d-md-none">
                     <button class="btn btn-dark"  data-toggle="collapse" data-target="#collapseExample"><i class="fas fa-bars fa-2x"></i></button>
                 </div>
               </div>
-              
             </div>
             <div class="col-md-6 text-right  m-0 p-0">
               <form class="m-0 p-0 d-inline" method="POST" action="{{route('search')}}">
@@ -34,33 +33,30 @@
                       <div class="input-group-prepend">
                       <div class="input-group-text"><i class="fas fa-search"></i></div>
                       </div>
+                      
                       <input type="text" name="search" class="form-control" >
                   </div>
               </form>
             </div>
           </div>
         </div>
-
-<div class="d-sm-block d-md-none">
-
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-  <div class="mt-3 ">
-                  @foreach($categories as $category)
-                    <p class="d-inline p-2 m-2 small"><a href="{{route('category',$category->id)}}"><i class="fas fa-layer-group"></i>  {{ $category->name }}</a></p>
-                  @endforeach
-                </div>
-                <hr>
-
-                <div class="mt-3 mb-3">
-                  @foreach($authors as $author)
-                    <p class="d-inline p-2 m-2 small"><a href="{{route('author',$author->id)}}"><i class="fas fa-user"></i>  {{ $author->name }}</a></p>
-                  @endforeach
-                </div>
-               
-  </div>
-</div>
-</div>
+     
+    <div class="d-sm-block d-md-none">
+      <div class="collapse  " id="collapseExample">
+        <div class="card card-body bg-dark rounded-0">
+          <div class="mt-3 ">
+            @foreach($categories as $category)
+              <p class="d-inline p-2 m-2 small"><a class="text-light" href="{{route('category',$category->id)}}"><i class="fas fa-layer-group"></i>  {{ $category->name }}</a></p>
+            @endforeach
+          </div>
+          <hr>
+          <div class="mt-3 mb-3">
+            @foreach($authors as $author)
+              <p class="d-inline p-2 m-2 small"><a class="text-light" href="{{route('author',$author->id)}}"><i class="fas fa-user"></i>  {{ $author->name }}</a></p>
+            @endforeach
+          </div>
+        </div>
+    </div>
 </header>
 
 <content>
@@ -96,25 +92,16 @@
 
     </div>
     </content>
-<hr>
+    <hr>
     <footer class="mt-auto bg-dark">
-    
-
           <div class="row align-items-center  mt-4 m-0 p-0 justify-content-center">
             <div class="col-md-4 text-center">
               <p class="text-muted small"><a class="text-muted" href="https://github.com/rustedchip"><i class="fab fa-github fa-3x"></i></a></p>
             </div>
-            <div class="col-md-4 text-center">
-              <p class="text-muted small">Powered by <a class="text-muted" href="https://thinkervolt.com">THINKERVOLT</a></p>
-            </div>
           </div>
        
- 
-    
     </footer>
 
-
-  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -4,7 +4,7 @@
 
 <title>@if(isset($home)) {{$home}} @endif &nbsp;&#124;&nbsp; rustedchip &nbsp;&#124;&nbsp; blog </title>
 <meta name="author" content="rustedchip@gmail.com">
-<meta name="description" content="rustedchip - blog">
+<meta name="description" content="{{Voyager::setting('site.description', 'Site Description')}}">
 <meta name="keywords" content="rustedchip, blog, technology, webapp, developer">
 
 @endsection
