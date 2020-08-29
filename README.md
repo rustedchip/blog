@@ -29,7 +29,7 @@
 * Blog name can be changed on Voyager Site Settings
 * Style, well it is boostrap play with it.
 
-### Posible Problems
+### Possible Problems
 
 Images not displaying?  
 **Make sure that your .env file has the right APP_URL=http://localhost:8000 where you are testing or deploying.**
