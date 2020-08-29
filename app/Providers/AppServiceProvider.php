@@ -25,13 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
-        /* Comment or Remove on Deploy */
-        
-        $categories = App\Category::all();
-        $authors = App\User::all();
-
-        if($categories && $authors){
+        if(config('app.debug') == false){
+            $categories = App\Category::all();
+            $authors = App\User::all();
             View::share('categories', $categories);
             View::share('authors', $authors);
         }
