@@ -3,6 +3,10 @@
 @section('head-tags') 
 
 <title>{{ $post->title }} &nbsp;&#124;&nbsp rustedchip &nbsp;&#124;&nbsp blog</title>
+<meta name="author" content="@if(isset($post->author->name)) {{ $post->author->name }}  @endif">
+<meta name="description" content="{{$post->meta_description}}">
+<meta name="keywords" content="{{$post->meta_keywords}}">
+
 
 @endsection
 

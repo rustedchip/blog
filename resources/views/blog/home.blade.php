@@ -3,6 +3,9 @@
 @section('head-tags') 
 
 <title>@if(isset($home)) {{$home}} @endif &nbsp;&#124;&nbsp; rustedchip &nbsp;&#124;&nbsp; blog </title>
+<meta name="author" content="rustedchip@gmail.com">
+<meta name="description" content="rustedchip - blog">
+<meta name="keywords" content="rustedchip, blog, technology, webapp, developer">
 
 @endsection
 @section('content')
