@@ -65,10 +65,6 @@
 
             <div class="col-md-3 d-none d-md-block">
 
-                <div class=" mt-3 mb-3 p-0 m-0">
-                 <p class="text-muted"> Categories & Authors </p>
-                </div>
-                <hr>
                 <div class="mt-3 mb-3">
                   @foreach($categories as $category)
                     <p class="d-inline p-2 m-2 small"><a href="{{route('category',$category->id)}}"><i class="fas fa-layer-group"></i>  {{ $category->name }}</a></p>
