@@ -24,7 +24,7 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img class="img-fluid" src="{{ Voyager::image( $post->image ) }}" >
+                    @if(isset($post->image))<a class="text-dark" href="{{route('post',$post->slug)}}"><img class="img-fluid" src="{{ Voyager::image( $post->image ) }}" ></a>@endif
                 </div>
             </div>
 
