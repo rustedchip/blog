@@ -17,7 +17,7 @@
 #### ADMIN
 ![admin-preview](/blog-preview/admin.png "admin-preview")
 
-### Intallation
+### Installation
 
 * Clone Project
 * Create your .env and add Database Credentials first to prevent errors during Voyager Install
