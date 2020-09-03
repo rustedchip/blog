@@ -10,7 +10,7 @@ class BlogController extends Controller
     
     public function home()
     {
-        $posts = App\Post::where('status','PUBLISHED')->paginate('10');
+        $posts = App\Post::where('status','PUBLISHED')->orderBy('created_at','DESC')->paginate('10');
         return view('blog.home',compact('posts'))->with('home','Home');
     }
 
@@ -23,7 +23,7 @@ class BlogController extends Controller
     public function category($id)
     {
 
-        $posts = App\Post::where('category_id',$id)->where('status','PUBLISHED')->paginate('10');
+        $posts = App\Post::where('category_id',$id)->where('status','PUBLISHED')->orderBy('created_at','DESC')->paginate('10');
         return view('blog.home',compact('posts'))->with('home','Posts by Category');
  
     }
@@ -31,7 +31,7 @@ class BlogController extends Controller
     public function author($id)
     {
 
-        $posts = App\Post::where('author_id',$id)->where('status','PUBLISHED')->paginate('10');
+        $posts = App\Post::where('author_id',$id)->where('status','PUBLISHED')->orderBy('created_at','DESC')->paginate('10');
         return view('blog.home',compact('posts'))->with('home','Posts by Author');
  
  
@@ -52,7 +52,7 @@ class BlogController extends Controller
         ->orwhereIn('author_id',$authors)
         ->orwhereIn('category_id',$categories);
         
-        $posts =  App\Post::whereIn('id',$search)->where('status','PUBLISHED')->orderBy('created_at')->paginate(10); 
+        $posts =  App\Post::whereIn('id',$search)->where('status','PUBLISHED')->orderBy('created_at','DESC')->paginate(10); 
 
         return view('blog.home',compact('posts'))->with('home','Search Results . . .');
     }
